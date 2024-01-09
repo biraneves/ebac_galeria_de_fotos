@@ -4,6 +4,7 @@
   --base-font: 'Roboto', sans-serif;
   --base-white: #fff;
   --base-dark: #341f97;
+  --base-black-transp: rgba(0, 0, 0, 0.7);
   --background-color: #5f27cd;
   --background-light-color: #c8d6e5;
   --background-button-color: #009432;
@@ -64,4 +65,42 @@ button {
 
 #botao-cancelar {
   background-color: var(--background-cancel-color);
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+ul li {
+  max-width: 20%;
+  max-height: 250px;
+  list-style: none;
+  position: relative;
+  overflow-y: hidden;
+}
+
+ul li img {
+  width: 100%;
+}
+
+.overlay-imagem-link {
+  padding: 16px;
+  background-color: var(--base-black-transp);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  opacity: 0;
+  transition: all ease 0.4s;
+}
+
+.overlay-imagem-link a {
+  font-family: var(--base-font);
+  color: var(--base-white);
+  text-decoration: none;
+}
+
+ul li:hover .overlay-imagem-link {
+  opacity: 1;
 }
