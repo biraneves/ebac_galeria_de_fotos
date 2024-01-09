@@ -38,6 +38,7 @@ form {
   background-color: var(--background-light-color);
   padding: 24px 0;
   text-align: center;
+  display: none;
 }
 
 form h2 {
